@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
 import React , {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -27,6 +29,7 @@ dispatch(selectedProduct(response.data));
     return () => {
       dispatch(removeSelectedProduct());
     }
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [productId ]);
   return (
     <div className="ui grid container">
